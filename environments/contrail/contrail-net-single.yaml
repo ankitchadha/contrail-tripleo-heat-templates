@@ -1,10 +1,10 @@
 resource_registry:
   OS::TripleO::Compute::Net::SoftwareConfig: contrail-nic-config-compute-single.yaml
   OS::TripleO::Controller::Net::SoftwareConfig: contrail-nic-config-single.yaml
-  OS::TripleO::ContrailController::Net::SoftwareConfig: contrail-nic-config-single.yaml
-  OS::TripleO::ContrailAnalytics::Net::SoftwareConfig: contrail-nic-config-single.yaml
-  OS::TripleO::ContrailAnalyticsDatabase::Net::SoftwareConfig: contrail-nic-config-single.yaml
-  OS::TripleO::ContrailTsn::Net::SoftwareConfig: contrail-nic-config-compute-single.yaml
+  OS::TripleO::ContrailControllerWithContainer::Net::SoftwareConfig: contrail-nic-config-single.yaml
+  OS::TripleO::ContrailAnalyticsWithContainer::Net::SoftwareConfig: contrail-nic-config-single.yaml
+  OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Net::SoftwareConfig: contrail-nic-config-single.yaml
+  OS::TripleO::ContrailTsnWithContainer::Net::SoftwareConfig: contrail-nic-config-compute-single.yaml
 
 parameter_defaults:
   ControlPlaneSubnetCidr: '24'

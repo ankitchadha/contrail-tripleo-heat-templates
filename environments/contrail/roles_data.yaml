@@ -166,13 +166,13 @@
     - OS::TripleO::Services::FluentdClient
     - OS::TripleO::Services::VipHosts
 
-- name: ContrailController
+- name: ContrailControllerWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    #- OS::TripleO::Services::ContrailConfig
-    #- OS::TripleO::Services::ContrailControl
-    #- OS::TripleO::Services::ContrailDatabase
-    #- OS::TripleO::Services::ContrailWebUI
+    - OS::TripleO::Services::ContrailConfig
+    - OS::TripleO::Services::ContrailControl
+    - OS::TripleO::Services::ContrailDatabase
+    - OS::TripleO::Services::ContrailWebUI
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
@@ -182,10 +182,10 @@
     - OS::TripleO::Services::FluentdClient
     - OS::TripleO::Services::VipHosts
 
-- name: ContrailAnalytics
+- name: ContrailAnalyticsWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    #- OS::TripleO::Services::ContrailAnalytics
+    - OS::TripleO::Services::ContrailAnalytics
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
@@ -195,10 +195,10 @@
     - OS::TripleO::Services::FluentdClient
     - OS::TripleO::Services::VipHosts
 
-- name: ContrailAnalyticsDatabase
+- name: ContrailAnalyticsDatabaseWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    #- OS::TripleO::Services::ContrailAnalyticsDatabase
+    - OS::TripleO::Services::ContrailAnalyticsDatabase
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
@@ -208,10 +208,10 @@
     - OS::TripleO::Services::FluentdClient
     - OS::TripleO::Services::VipHosts
 
-- name: ContrailTsn
+- name: ContrailTsnWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    #- OS::TripleO::Services::ContrailTsn
+    - OS::TripleO::Services::ContrailTsn
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone

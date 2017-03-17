@@ -14,10 +14,10 @@ resource_registry:
   #OS::TripleO::Compute::Ports::StorageMgmtPort: ../../network/ports/noop.yaml
   #OS::TripleO::Compute::Ports::TenantPort: ../../network/ports/tenant_from_pool.yaml
   #OS::TripleO::Compute::Ports::ManagementPort: ../../network/ports/management_from_pool.yaml
-  OS::TripleO::ContrailController::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
-  OS::TripleO::ContrailAnalytics::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
-  OS::TripleO::ContrailAnalyticsDatabase::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
-  OS::TripleO::ContrailTsn::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
+  OS::TripleO::ContrailControllerWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
+  OS::TripleO::ContrailAnalyticsWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
+  OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
+  OS::TripleO::ContrailTsnWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api_from_pool.yaml
 
   #OS::TripleO::CephStorage::Ports::ExternalPort: ../../network/ports/noop.yaml
   #OS::TripleO::CephStorage::Ports::InternalApiPort: ../../network/ports/noop.yaml
@@ -60,22 +60,22 @@ parameter_defaults:
     - 10.0.0.34
     - 10.0.0.35
     - 10.0.0.36
-  ContrailControllerIPs:
+  ContrailControllerWithContainerIPs:
     internal_api:
     - 10.0.0.40
     - 10.0.0.41
     - 10.0.0.42
-  ContrailAnalyticsIPs:
+  ContrailAnalyticsWithContainerIPs:
     internal_api:
     - 10.0.0.50
     - 10.0.0.51
     - 10.0.0.52
-  ContrailAnalyticsDatabaseIPs:
+  ContrailAnalyticsDatabaseWithContainerIPs:
     internal_api:
     - 10.0.0.60
     - 10.0.0.61
     - 10.0.0.62
-  ContrailTsnIPs:
+  ContrailTsnWithContainerIPs:
     internal_api:
     - 10.0.0.70
     - 10.0.0.71

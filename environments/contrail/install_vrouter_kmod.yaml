@@ -41,7 +41,7 @@ resources:
             gpgcheck=0
             protect=1
             EOF
-            if [[ `hostname |awk -F"-" '{print $2}'` == "contrailcontroller" || `hostname |awk -F"-" '{print $2}'` == "contrailanalytics" || `hostname |awk -F"-" '{print $2}'` == "contrailanalyticsdatabase" ]]; then
+            if [[ `hostname |awk -F"-" '{print $2}'` == "contrailcontrollerwithcontainer" || `hostname |awk -F"-" '{print $2}'` == "contrailanalyticswithcontainer" || `hostname |awk -F"-" '{print $2}'` == "contrailanalyticsdatabasewithcontainer" ]]; then
               sed -i '/\[main\]/a \ \ \ \ \parser = future' /etc/puppet/puppet.conf
             fi
             if [[ `hostname |awk -F"-" '{print $2}'` == "novacompute" || `hostname |awk -F"-" '{print $2}'` == "contrailtsn" ]]; then 
