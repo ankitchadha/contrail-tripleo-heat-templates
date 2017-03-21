@@ -169,10 +169,10 @@
 - name: ContrailControllerWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    - OS::TripleO::Services::ContrailConfig
-    - OS::TripleO::Services::ContrailControl
-    - OS::TripleO::Services::ContrailDatabase
-    - OS::TripleO::Services::ContrailWebUI
+    - OS::TripleO::Services::ContrailConfigNew
+    - OS::TripleO::Services::ContrailControlNew
+    - OS::TripleO::Services::ContrailDatabaseNew
+    - OS::TripleO::Services::ContrailWebUINew
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
@@ -185,7 +185,7 @@
 - name: ContrailAnalyticsWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    - OS::TripleO::Services::ContrailAnalytics
+    - OS::TripleO::Services::ContrailAnalyticsNew
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
@@ -198,7 +198,7 @@
 - name: ContrailAnalyticsDatabaseWithContainer
   ServicesDefault:
     - OS::TripleO::Services::CACerts
-    - OS::TripleO::Services::ContrailAnalyticsDatabase
+    - OS::TripleO::Services::ContrailAnalyticsDatabaseNew
     - OS::TripleO::Services::Kernel
     - OS::TripleO::Services::Ntp
     - OS::TripleO::Services::Timezone
