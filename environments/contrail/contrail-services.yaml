@@ -8,15 +8,24 @@ resource_registry:
   OS::TripleO::Services::ComputeNeutronOvsAgent: OS::Heat::None
   OS::TripleO::NodeUserData: install_vrouter_kmod.yaml
   OS::TripleO::Services::ContrailHeat: ../../puppet/services/network/contrail-heat.yaml
-  OS::TripleO::Services::ContrailAnalyticsNew: ../../puppet/services/network/contrail-analytics.yaml
-  OS::TripleO::Services::ContrailAnalyticsDatabaseNew: ../../puppet/services/network/contrail-analytics-database.yaml
-  OS::TripleO::Services::ContrailConfigNew: ../../puppet/services/network/contrail-config.yaml
-  OS::TripleO::Services::ContrailControlNew: ../../puppet/services/network/contrail-control.yaml
-  OS::TripleO::Services::ContrailDatabaseNew: ../../puppet/services/network/contrail-database.yaml
-  OS::TripleO::Services::ContrailWebUINew: ../../puppet/services/network/contrail-webui.yaml
+  OS::TripleO::Services::ContrailAnalytics: ../../puppet/services/network/contrail-analytics.yaml
+  OS::TripleO::Services::ContrailAnalyticsDatabase: ../../puppet/services/network/contrail-analytics-database.yaml
+  OS::TripleO::Services::ContrailConfig: ../../puppet/services/network/contrail-config.yaml
+  OS::TripleO::Services::ContrailControl: ../../puppet/services/network/contrail-control.yaml
+  OS::TripleO::Services::ContrailDatabase: ../../puppet/services/network/contrail-database.yaml
+  OS::TripleO::Services::ContrailWebUI: ../../puppet/services/network/contrail-webui.yaml
   OS::TripleO::Services::ContrailTsn: ../../puppet/services/network/contrail-tsn.yaml
   OS::TripleO::Services::ComputeNeutronCorePlugin: ../../puppet/services/network/contrail-vrouter.yaml
   OS::TripleO::Services::NeutronCorePlugin: ../../puppet/services/network/contrail-neutron-plugin.yaml
+
+  OS::TripleO::Services::ContrailAnalyticsNew: ../../puppet/services/network/contrail-analytics-new.yaml
+  OS::TripleO::Services::ContrailAnalyticsDatabaseNew: ../../puppet/services/network/contrail-analytics-database-new.yaml
+  OS::TripleO::Services::ContrailConfigNew: ../../puppet/services/network/contrail-config-new.yaml
+  OS::TripleO::Services::ContrailControlNew: ../../puppet/services/network/contrail-control-new.yaml
+  OS::TripleO::Services::ContrailDatabaseNew: ../../puppet/services/network/contrail-database-new.yaml
+  OS::TripleO::Services::ContrailWebUINew: ../../puppet/services/network/contrail-webui-new.yaml
+  OS::TripleO::Services::ContrailTsnNew: ../../puppet/services/network/contrail-tsn-new.yaml
+
 parameter_defaults:
   ServiceNetMap:
     ContrailAnalyticsNetwork: internal_api
@@ -27,21 +36,31 @@ parameter_defaults:
     ContrailWebuiNetwork: internal_api
     ContrailTsnNetwork: internal_api
     ContrailVrouterNetwork: internal_api
+
+    ContrailAnalyticsNewNetwork: internal_api
+    ContrailAnalyticsDatabaseNewNetwork: internal_api
+    ContrailConfigNewNetwork: internal_api
+    ContrailControlNewNetwork: internal_api
+    ContrailDatabaseNewNetwork: internal_api
+    ContrailWebuiNewNetwork: internal_api
+    ContrailTsnNewNetwork: internal_api
+    ContrailVrouterNewNetwork: internal_api
+
   ContrailRepo: http://192.0.2.1/contrail
   EnablePackageInstall: true
   ContrailConfigIfmapUserName: api-server
   ContrailConfigIfmapUserPassword: api-server
   OvercloudControlFlavor: control
-  OvercloudContrailControllerWithContainerFlavor: contrail-controller
-  OvercloudContrailAnalyticsWithContainerFlavor: contrail-analytics
-  OvercloudContrailAnalyticsDatabaseWithContainerFlavor: contrail-analytics-database
-  OvercloudContrailTsnWithContainerFlavor: contrail-tsn
+  OvercloudContrailControllerFlavor: contrail-controller
+  OvercloudContrailAnalyticsFlavor: contrail-analytics
+  OvercloudContrailAnalyticsDatabaseFlavor: contrail-analytics-database
+  OvercloudContrailTsnFlavor: contrail-tsn
   OvercloudComputeFlavor: compute
   ControllerCount: 1
-  ContrailControllerWithContainerCount: 1
-  ContrailAnalyticsWithContainerCount: 1
-  ContrailAnalyticsDatabaseWithContainerCount: 1
-  #ContrailTsnCount: 1
+  ContrailControllerCount: 1
+  ContrailAnalyticsCount: 1
+  ContrailAnalyticsDatabaseCount: 1
+  ContrailTsnCount: 0
   ComputeCount: 1
   DnsServers: ["8.8.8.8","8.8.4.4"]
   NtpServer: 10.0.0.1
@@ -53,3 +72,10 @@ parameter_defaults:
   NovaComputeExtraConfig:
     # Required for Centos 7.3 and Qemu 2.6.0
     nova::compute::libvirt::libvirt_cpu_mode: 'none'
+  OvercloudContrailControllerWithContainerFlavor: contrail-controller
+  OvercloudContrailAnalyticsWithContainerFlavor: contrail-analytics
+  OvercloudContrailAnalyticsDatabaseWithContainerFlavor: contrail-analytics-database
+  OvercloudContrailTsnWithContainerFlavor: contrail-tsn
+  ContrailControllerWithContainerCount: 1
+  ContrailAnalyticsWithContainerCount: 1
+  ContrailAnalyticsDatabaseWithContainerCount: 1

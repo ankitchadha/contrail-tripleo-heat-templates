@@ -60,12 +60,26 @@ resource_registry:
   OS::TripleO::BlockStorage::Ports::TenantPort: ../../network/ports/noop.yaml
   OS::TripleO::BlockStorage::Ports::ManagementPort: ../../network/ports/management.yaml
 
+  OS::TripleO::ContrailController::Ports::ExternalPort: ../../network/ports/external.yaml
+  OS::TripleO::ContrailController::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
+  OS::TripleO::ContrailController::Ports::StoragePort: ../../network/ports/storage.yaml
+  OS::TripleO::ContrailController::Ports::StorageMgmtPort: ../../network/ports/storage_mgmt.yaml
+  OS::TripleO::ContrailController::Ports::TenantPort: ../../network/ports/tenant.yaml
+  OS::TripleO::ContrailController::Ports::ManagementPort: ../../network/ports/management.yaml
+
   OS::TripleO::ContrailControllerWithContainer::Ports::ExternalPort: ../../network/ports/external.yaml
   OS::TripleO::ContrailControllerWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
   OS::TripleO::ContrailControllerWithContainer::Ports::StoragePort: ../../network/ports/storage.yaml
   OS::TripleO::ContrailControllerWithContainer::Ports::StorageMgmtPort: ../../network/ports/storage_mgmt.yaml
   OS::TripleO::ContrailControllerWithContainer::Ports::TenantPort: ../../network/ports/tenant.yaml
   OS::TripleO::ContrailControllerWithContainer::Ports::ManagementPort: ../../network/ports/management.yaml
+
+  OS::TripleO::ContrailAnalytics::Ports::ExternalPort: ../../network/ports/external.yaml
+  OS::TripleO::ContrailAnalytics::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
+  OS::TripleO::ContrailAnalytics::Ports::StoragePort: ../../network/ports/storage.yaml
+  OS::TripleO::ContrailAnalytics::Ports::StorageMgmtPort: ../../network/ports/storage_mgmt.yaml
+  OS::TripleO::ContrailAnalytics::Ports::TenantPort: ../../network/ports/tenant.yaml
+  OS::TripleO::ContrailAnalytics::Ports::ManagementPort: ../../network/ports/management.yaml
 
   OS::TripleO::ContrailAnalyticsWithContainer::Ports::ExternalPort: ../../network/ports/external.yaml
   OS::TripleO::ContrailAnalyticsWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
@@ -74,12 +88,26 @@ resource_registry:
   OS::TripleO::ContrailAnalyticsWithContainer::Ports::TenantPort: ../../network/ports/tenant.yaml
   OS::TripleO::ContrailAnalyticsWithContainer::Ports::ManagementPort: ../../network/ports/management.yaml
 
+  OS::TripleO::ContrailAnalyticsDatabase::Ports::ExternalPort: ../../network/ports/external.yaml
+  OS::TripleO::ContrailAnalyticsDatabase::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
+  OS::TripleO::ContrailAnalyticsDatabase::Ports::StoragePort: ../../network/ports/storage.yaml
+  OS::TripleO::ContrailAnalyticsDatabase::Ports::StorageMgmtPort: ../../network/ports/storage_mgmt.yaml
+  OS::TripleO::ContrailAnalyticsDatabase::Ports::TenantPort: ../../network/ports/tenant.yaml
+  OS::TripleO::ContrailAnalyticsDatabase::Ports::ManagementPort: ../../network/ports/management.yaml
+
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::ExternalPort: ../../network/ports/external.yaml
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::StoragePort: ../../network/ports/storage.yaml
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::StorageMgmtPort: ../../network/ports/storage_mgmt.yaml
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::TenantPort: ../../network/ports/tenant.yaml
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Ports::ManagementPort: ../../network/ports/management.yaml
+
+  OS::TripleO::ContrailTsn::Ports::ExternalPort: ../../network/ports/external.yaml
+  OS::TripleO::ContrailTsn::Ports::InternalApiPort: ../../network/ports/internal_api.yaml
+  OS::TripleO::ContrailTsn::Ports::StoragePort: ../../network/ports/storage.yaml
+  OS::TripleO::ContrailTsn::Ports::StorageMgmtPort: ../../network/ports/storage_mgmt.yaml
+  OS::TripleO::ContrailTsn::Ports::TenantPort: ../../network/ports/tenant.yaml
+  OS::TripleO::ContrailTsn::Ports::ManagementPort: ../../network/ports/management.yaml
 
   OS::TripleO::ContrailTsnWithContainer::Ports::ExternalPort: ../../network/ports/external.yaml
   OS::TripleO::ContrailTsnWithContainer::Ports::InternalApiPort: ../../network/ports/internal_api.yaml

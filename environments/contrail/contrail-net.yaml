@@ -6,6 +6,12 @@ resource_registry:
   OS::TripleO::ContrailAnalyticsDatabaseWithContainer::Net::SoftwareConfig: contrail-nic-config.yaml
   OS::TripleO::ContrailTsnWithContainer::Net::SoftwareConfig: contrail-nic-config-compute.yaml
 
+  OS::TripleO::ContrailController::Net::SoftwareConfig: contrail-nic-config.yaml
+  OS::TripleO::ContrailAnalytics::Net::SoftwareConfig: contrail-nic-config.yaml
+  OS::TripleO::ContrailAnalyticsDatabase::Net::SoftwareConfig: contrail-nic-config.yaml
+  OS::TripleO::ContrailTsn::Net::SoftwareConfig: contrail-nic-config-compute.yaml
+
+
 parameter_defaults:
   ControlPlaneSubnetCidr: '24'
   ControlPlaneDefaultRoute: 192.0.2.254
@@ -24,3 +30,4 @@ parameter_defaults:
   VrouterNetmask: 255.255.255.0
   ControlVirtualInterface: eth0
   PublicVirtualInterface: vlan10
+# VlanParentInterface: eth1 # If VrouterPhysicalInterface is a vlan interface using vlanX notation
